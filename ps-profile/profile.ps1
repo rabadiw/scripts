@@ -3,7 +3,7 @@ function prompt {
 }
 
 # Starts Powershell in a new Windows
-function New-Powershell-Window {
+function New-Powershell {
   [CmdletBinding(SupportsShouldProcess=$true)]
   param(
     # Working directory sets the path to the specified value
@@ -19,4 +19,4 @@ function New-Powershell-Window {
     Start-Process Powershell.exe -WorkingDirectory $WorkingDirectory
   }
 }
-Set-Alias -Name psw -Value New-Powershell-Window
+Set-Alias -Name nps -Value New-Powershell
